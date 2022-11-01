@@ -13,4 +13,4 @@ service vibrator-service /vendor/bin/vendor.qti.hardware.vibrator@1.2-service
 
 on boot
     start vibrator-service
-
+    start health-hal-2-1
