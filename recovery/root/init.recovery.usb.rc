@@ -67,6 +67,9 @@ on fs
     setprop sys.usb.mtp.device_type 3
     setprop sys.usb.configfs 1
 
+on boot
+    start health-hal-2-1
+
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
 
