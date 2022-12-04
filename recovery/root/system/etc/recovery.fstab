@@ -35,12 +35,17 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
-system                                                  /system                ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
-system_ext                                              /system_ext            ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_system,logical,first_stage_mount
-product                                                 /product               ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_system,logical,first_stage_mount
-vendor                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount
-odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount
-/dev/block/bootdevice/by-name/metadata                  /metadata              ext4    noatime,nosuid,nodev,discard                         wait,formattable,wrappedkey,first_stage_mount
-/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt,checkpoint_merge    latemount,wait,formattable,fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
+system                                                  /system                ext4    ro,barrier=1,discard,i_version                       wait,avb=vbmeta_system,logical,first_stage_mount,readahead_size_kb=128
+system                                                  /system                erofs   ro                                                   wait,avb=vbmeta_system,logical,first_stage_mount,readahead_size_kb=128
+system_ext                                              /system_ext            ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_system,logical,first_stage_mount,readahead_size_kb=128
+system_ext                                              /system_ext            erofs   ro                                                   wait,avb=vbmeta_system,logical,first_stage_mount,readahead_size_kb=128
+product                                                 /product               ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_system,logical,first_stage_mount,readahead_size_kb=128
+product                                                 /product               erofs   ro                                                   wait,avb=vbmeta_system,logical,first_stage_mount,readahead_size_kb=128
+vendor                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount,readahead_size_kb=128
+vendor                                                  /vendor                erofs   ro                                                   wait,avb,logical,first_stage_mount,readahead_size_kb=128
+odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount,readahead_size_kb=128
+odm                                                     /odm                   erofs   ro                                                   wait,avb,logical,first_stage_mount,readahead_size_kb=128
+/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount,wrappedkey
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt,compress_algorithm=lz4,atgc,checkpoint_merge,compress_cache    latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,metadata_encryption=aes-256-xts:wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs,fscompress,readahead_size_kb=128
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
 
