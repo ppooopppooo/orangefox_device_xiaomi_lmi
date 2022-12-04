@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/cas
+DEVICE_PATH := device/xiaomi/lmi
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -29,7 +29,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := cas
+TARGET_OTA_ASSERT_DEVICE := lmi
 
 # AVB
 BOARD_AVB_ENABLE := true
@@ -90,7 +90,7 @@ BOARD_KERNEL_CMDLINE := \
     service_locator.enable=1 \
     swiotlb=2048 \
     androidboot.usbconfigfs=true \
-	androidboot.selinux=permissive
+    androidboot.selinux=permissive
 
 BOARD_KERNEL_IMAGE_NAME    := Image
 BOARD_KERNEL_PAGESIZE      := 4096
@@ -101,7 +101,7 @@ BOARD_KERNEL_SECOND_OFFSET := 0x00000000
 BOARD_RAMDISK_OFFSET       := 0x01000000
 BOARD_DTB_OFFSET           := 0x01f00000
 TARGET_KERNEL_ARCH := arm64
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -178,12 +178,11 @@ TARGET_USES_LOGD := true
 TW_NO_SCREEN_BLANK := true
 TW_HAS_EDL_MODE := false
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
-TW_Y_OFFSET := 90
-TW_H_OFFSET := -90
-TW_DEVICE_VERSION := Xayah
+TW_DEVICE_VERSION := Sponmer
 TW_EXCLUDE_APEX := true
 TW_INCLUDE_PYTHON := true
 
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_FASTBOOTD := true

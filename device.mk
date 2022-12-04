@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/cas
-PRODUCT_RELEASE_NAME := cas
+LOCAL_PATH := device/xiaomi/lmi
+PRODUCT_RELEASE_NAME := lmi
 PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -14,11 +14,10 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
-# Fastbootd
+# fastbootd
 PRODUCT_PACKAGES += \
-	android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery \
-	fastbootd
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd \
 
 # Overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \

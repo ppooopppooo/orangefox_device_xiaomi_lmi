@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_cas.mk
+    $(LOCAL_DIR)/twrp_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_cas-user \
-    twrp_cas-userdebug \
-    twrp_cas-eng
+    twrp_lmi-user \
+    twrp_lmi-userdebug \
+    twrp_lmi-eng
