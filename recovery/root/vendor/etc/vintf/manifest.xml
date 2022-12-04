@@ -1,8 +1,9 @@
 <!--
     Input:
-        manifest.xml
         manifest_ds.xml
+        manifest.xml
         fod.xml
+        manifest.xml
         manifest.xml
         manifest.xml
         manifest.xml
@@ -457,14 +458,14 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <version>1.6</version>
+        <version>1.7</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
             <instance>imsradio1</instance>
         </interface>
-        <fqname>@1.6::IImsRadio/imsradio0</fqname>
-        <fqname>@1.6::IImsRadio/imsradio1</fqname>
+        <fqname>@1.7::IImsRadio/imsradio0</fqname>
+        <fqname>@1.7::IImsRadio/imsradio1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
@@ -571,16 +572,6 @@
         <fqname>@1.0::ISensorsCalibrate/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.slmadapter</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISlmAdapter</name>
-            <instance>SlmAdapter</instance>
-        </interface>
-        <fqname>@1.0::ISlmAdapter/SlmAdapter</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -589,21 +580,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISoter/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.trustedui</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITrustedInput</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ITrustedUI</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITrustedInput/default</fqname>
-        <fqname>@1.0::ITrustedUI/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
@@ -691,6 +667,16 @@
         <fqname>@1.0::ISlaService/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.xiaomi.hardware.batterylife</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBatteryLife</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IBatteryLife/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.xiaomi.hardware.citsensorservice</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -729,6 +715,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IXiaomiFingerprint/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.motor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMotor</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IMotor/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.touchfeature</name>

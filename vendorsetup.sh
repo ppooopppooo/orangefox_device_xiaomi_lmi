@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="cas"
+FDEVICE="lmi"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -41,6 +41,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_GREEN_LED=0
 	export OF_FBE_METADATA_MOUNT_IGNORE=1
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+	export OF_MANUAL_COPY_TWRES=1
 
 	export OF_USE_MAGISKBOOT=1
 	export OF_USE_NEW_MAGISKBOOT=1
@@ -64,17 +65,17 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
 	# Screen Settings
-	export OF_SCREEN_H=2340
+	export OF_SCREEN_H=2400
 	export OF_STATUS_H=110
 	export OF_STATUS_INDENT_LEFT=48
 	export OF_STATUS_INDENT_RIGHT=48
 	export OF_CLOCK_POS=0
-	export OF_HIDE_NOTCH=1
+	export OF_HIDE_NOTCH=0
 	export OF_ALLOW_DISABLE_NAVBAR=0
 	
 	# R11.1 Settings
 	export FOX_VERSION="R12.1"
-	export OF_MAINTAINER="Xayah"
+	export OF_MAINTAINER="Sponmer"
 	export FOX_BUILD_TYPE="Beta"
 
 	# Run a Process after Formatting Data to Work-Around MTP Issues
