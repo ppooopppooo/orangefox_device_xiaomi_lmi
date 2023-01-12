@@ -6,7 +6,7 @@ The Redmi K30 Pro (codenamed _"lmi"_) is a flagship smartphone from Xiaomi.
 Kernel and all blobs are extracted from [miui_LMI_V13.0.6.0.SJKCNXM_0962de9501_12.0.zip](https://bigota.d.miui.com/V13.0.6.0.SJKCNXM/miui_LMI_V13.0.6.0.SJKCNXM_0962de9501_12.0.zip) firmware.
 
 # Works:
-- **Decryption, tested on AOSP Roms(Android 12/13 with FBE v2 only)**
+- **Decryption, tested on AOSP Roms(Android 12/13 with FBE v2 only) e.g.[Arrow-v13.0-lmi-UNOFFICIAL-20230104](https://sourceforge.net/projects/rom-sponmer/files/ArrowOS/Arrow-v13.0-lmi-UNOFFICIAL-20230104-VANILLA.zip/download) **
 - MTP/ADB
 - Fastbootd
 - ADB Sideload
