@@ -11,6 +11,7 @@ Kernel and all blobs are extracted from [miui_LMI_V13.0.6.0.SJKCNXM_0962de9501_1
 - Fastbootd
 - ADB Sideload
 - Vibration
+- EROFS Filesystem
 - **Transfer for big files(>= 4GB)**
 - ...
 
